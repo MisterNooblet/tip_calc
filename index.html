@@ -7,10 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
 </head>
 
 <body>
-
+    <div class="calcbody">
+        <form id="calcHero" action="">
+            <div class="ad"></div>
+            <div id="calcMain" class="line "><Span class="title">Bill Total:</Span> <input id="billTotal" class="fill"
+                    type="number" placeholder="00.00"></div>
+            <div class="line values infoBorder"><Span class="title">Tip:</Span>
+                <h3 id="tipTop" class="fill">$$</h3>
+            </div>
+            <div class="line values infoBorder"><Span class="title">Tip+Bill:</Span>
+                <h3 id="tipAndBill" class="fill">$$</h3>
+            </div>
+        </form>
+        <form id="calcSecondary" action="">
+            <div class="line values"><span class="title">Tip%</span><input min="0" max="35" class="fill" type="range"
+                    name="" id="tip-range" value="1">
+                <h3 id="tipNum">0%</h3>
+            </div>
+            <div class="line values"><span class="title">Split:</span><input class="fill" type="range" min="1" max="20"
+                    name="" id="splitRange" value="1">
+                <h3 id="splitNum">1 &nbsp;</h3>
+            </div>
+            <div class="line values infoBorder"><Span class="title">Tip:</Span>
+                <h3 id="tipBottom" class="fill">$$</h3>
+            </div>
+            <div class="line values infoBorder"><Span class="title">Split Bill:</Span>
+                <h3 id="splitBills" class="fill">$$</h3>
+            </div>
+        </form>
+        <div class="buttons">
+            <button>Countries 🌍</button>
+            <button>Language 💬</button>
+        </div>
+        <div class="colors">
+            <div class="pink" class="colorCircle"></div>
+            <div class="gray" class="colorCircle"></div>
+            <div class="blue" class="colorCircle"></div>
+        </div>
+    </div>
 </body>
 <script src="/assets/scripts/script.js"></script>
 

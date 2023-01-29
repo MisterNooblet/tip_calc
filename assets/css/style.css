@@ -1,0 +1,91 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+.calcbody {
+  background: url('/assets/iPhone.svg') center center/cover;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title,
+h3 {
+  font-size: 1rem;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fill {
+  justify-self: end;
+  display: flex;
+  justify-content: end;
+  width: 70%;
+}
+#calcMain {
+  padding: 0.5rem;
+  /* background-color: rgba(214, 90, 49, 0.5); */
+  background-color: #eeeeee;
+  border-radius: 5px 5px 0 0;
+}
+
+#calcMain input {
+  background-color: #eeeeee;
+  border: none;
+}
+#calcHero {
+  background-color: rgba(34, 40, 49, 0.8);
+  border: 1px solid rgba(34, 40, 49, 1);
+  border-radius: 5px 5px 0 0;
+}
+
+.values {
+  /* background-color: rgba(34, 40, 49, 0.2); */
+  color: #eeeeee;
+  padding: 0 0.5rem;
+
+  border-top: 1px solid rgba(34, 40, 49, 1);
+}
+/* .infoBorder {
+  background-color: rgba(214, 90, 49, 0.5);
+} */
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#splitRange,
+#tip-range {
+  accent-color: rgba(214, 90, 49, 0.5);
+}
+/* #calcSecondary {
+  background-color: #eeeeee4b;
+}
+#calcSecondary * {
+  color: rgba(34, 40, 49, 1);
+} */
+button {
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: rgba(214, 90, 49, 0.5);
+  border: none;
+  border-radius: 5px;
+  border: 1px solid rgba(34, 40, 49, 1);
+}
