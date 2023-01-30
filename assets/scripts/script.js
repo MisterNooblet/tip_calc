@@ -107,387 +107,466 @@ let suggestions2 = [
     {
         name: 'Argentina',
         tip: 10,
-        msg: `10% is a common tipping practice in Argentina.`
+        msg: `10% is a common tipping practice in Argentina.`,
+        symbol: '$'
     },
     {
         name: 'Armenia',
         tip: 10,
-        msg: `10% is a common tipping practice in Armenia.`
+        msg: `10% is a common tipping practice in Armenia.`,
+        symbol: '֏'
     },
     {
         name: 'Australia',
         tip: 10,
-        msg: `10% is a common tipping practice  in fine restaurants only in Australia.`
+        msg: `10% is a common tipping practice  in fine restaurants only in Australia.`,
+        symbol: '$'
     },
     {
         name: 'Austria',
         tip: 5,
-        msg: `5% above service charge is a common tipping practice  in  Austria.`
+        msg: `5% above service charge is a common tipping practice  in  Austria.`,
+        symbol: '€'
     },
     {
         name: 'Azerbaijan',
         tip: 10,
-        msg: `10% is a common tipping practice in Azerbaijan.`
+        msg: `10% is a common tipping practice in Azerbaijan.`,
+        symbol: '(AZN)'
     },
     {
         name: 'Bahamas',
         tip: 10,
-        msg: `10% is a common tipping practice in Bahamas.`
+        msg: `10% is a common tipping practice in Bahamas.`,
+        symbol: '$'
     },
     {
         name: 'Bahrain',
         tip: 10,
-        msg: `10% is a common tipping practice in Bahrain.`
+        msg: `10% is a common tipping practice in Bahrain.`,
+        symbol: '(BD)'
     },
     {
         name: 'Belgium',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Belgium.`
+        msg: `10% is a common tipping if there is no service charge in Belgium.`,
+        symbol: '€'
     },
     {
         name: 'Bolivia',
         tip: 10,
-        msg: `10% is a common tipping practice in Bolivia.`
+        msg: `10% is a common tipping practice in Bolivia.`,
+        symbol: '(Bs)'
     },
     {
         name: 'Brazil',
         tip: 10,
-        msg: `10% - 15% is a common tipping practice in Brazil.`
+        msg: `10% - 15% is a common tipping practice in Brazil.`,
+        symbol: 'R$'
     },
     {
         name: 'Brunei',
         tip: 10,
-        msg: `There is a common tipping practice in Brunei.`
+        msg: `There is a common tipping practice in Brunei.`,
+        symbol: '(BND)'
     },
     {
         name: 'Bulgaria',
         tip: 10,
-        msg: `10% is a common tipping practice in Bulgaria.`
+        msg: `10% is a common tipping practice in Bulgaria.`,
+        symbol: '(lv)'
     },
     {
         name: 'Canada',
         tip: 15,
-        msg: `15% is a common tipping practice in Canada.`
+        msg: `15% is a common tipping practice in Canada.`,
+        symbol: '(CAD)'
     },
     {
         name: 'Cayman Isles',
         tip: 15,
-        msg: `15% is a common tipping practice if there is no service charge in Cayman Isles.`
+        msg: `15% is a common tipping practice if there is no service charge in Cayman Isles.`,
+        symbol: '(KYD)'
     },
     {
         name: 'Chile',
         tip: 10,
-        msg: `10% is a common tipping practice in addition to service charge in Chile.`
+        msg: `10% is a common tipping practice in addition to service charge in Chile.`,
+        symbol: '(CLP)'
     },
     {
         name: 'China',
         tip: 3,
-        msg: `3% is a common tipping practice in major cities of China.`
+        msg: `3% is a common tipping practice in major cities of China.`,
+        symbol: '¥'
     },
     {
         name: 'Colombia',
         tip: 10,
-        msg: `10% is a common tipping practice in Colombia.`
+        msg: `10% is a common tipping practice in Colombia.`,
+        symbol: '(COP)'
     },
     {
         name: 'Costa Rica',
         tip: 0,
-        msg: `Tipping is uncommon in Costa Rica.`
+        msg: `Tipping is uncommon in Costa Rica.`,
+        symbol: '₡'
     },
     {
         name: 'Cuba',
         tip: 1,
         msg: `1% is a common tipping practice for special service in Cuba.`
+        ,
+        symbol: '₱'
     },
     {
         name: 'Czech Rep',
         tip: 5,
         msg: `5% - 10% is a common tipping practice in Czech Rep.`
+        ,
+        symbol: 'Kč'
     },
     {
         name: 'Denmark',
         tip: 0,
-        msg: `Tipping is uncommon in Denmark.`
+        msg: `Tipping is uncommon in Denmark.`,
+        symbol: '(kr)'
     },
     {
         name: 'Ecuador',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Ecuador.`
+        msg: `10% is a common tipping if there is no service charge in Ecuador.`,
+        symbol: '$'
     },
     {
         name: 'Egypt',
         tip: 5,
-        msg: `5% - 10% on top of service charge is a common tipping practice in Egypt.`
+        msg: `5% - 10% on top of service charge is a common tipping practice in Egypt.`,
+        symbol: 'E£'
     },
     {
         name: 'England',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in England.`
+        msg: `10% is a common tipping if there is no service charge in England.`,
+        symbol: '£'
     },
     {
         name: 'Fiji',
         tip: 0,
-        msg: `Tipping is uncommon in Fiji.`
+        msg: `Tipping is uncommon in Fiji.`,
+        symbol: '(FJD)'
     },
     {
         name: 'Finland',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Finland.`
+        msg: `10% is a common tipping if there is no service charge in Finland.`,
+        symbol: '(mk)'
     },
     {
         name: 'France',
         tip: 5,
-        msg: `5% - 10% is a common tipping practice in France.`
+        msg: `5% - 10% is a common tipping practice in France.`,
+        symbol: '€'
     },
     {
         name: 'Germany',
         tip: 5,
-        msg: `5% - 10% is a common tipping practice in Germany.`
+        msg: `5% - 10% is a common tipping practice in Germany.`,
+        symbol: '€'
     },
     {
         name: 'Greece',
         tip: 5,
-        msg: `5% - 10% on top of service charge is a common tipping practice in Greece.`
+        msg: `5% - 10% on top of service charge is a common tipping practice in Greece.`,
+        symbol: '€'
     },
     {
         name: 'Guatemala',
         tip: 5,
-        msg: `5% - 10% on top of service charge is a common tipping practice in Guatemala.`
+        msg: `5% - 10% on top of service charge is a common tipping practice in Guatemala.`,
+        symbol: 'Q'
     },
     {
         name: 'Holland',
         tip: 5,
-        msg: `5% - 10% is a common tipping practice in Holland.`
+        msg: `5% - 10% is a common tipping practice in Holland.`,
+        symbol: '€'
     },
     {
         name: 'Hong Kong',
         tip: 5,
-        msg: `5% - 10% on top of service charge is a common tipping practice in Hong Kong.`
+        msg: `5% - 10% on top of service charge is a common tipping practice in Hong Kong.`,
+        symbol: '元'
     },
     {
         name: 'Hungary',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Hungary.`
+        msg: `10% is a common tipping if there is no service charge in Hungary.`,
+        symbol: '(Ft)'
     },
     {
         name: 'Iceland',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Iceland.`
+        msg: `10% is a common tipping if there is no service charge in Iceland.`,
+        symbol: '(kr)'
     },
     {
         name: 'India',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in India.`
+        msg: `10% is a common tipping if there is no service charge in India.`,
+        symbol: '₹'
     },
     {
         name: 'Indonesia',
         tip: 10,
-        msg: `10% is a common tipping practice in Indonesia.`
+        msg: `10% is a common tipping practice in Indonesia.`,
+        symbol: '(Rp)'
     },
     {
         name: 'Ireland',
         tip: 10,
-        msg: `10% - 15% is a common tipping practice in Ireland.`
+        msg: `10% - 15% is a common tipping practice in Ireland.`,
+        symbol: '€'
     },
     {
         name: 'Israel',
         tip: 10,
-        msg: `10% - 12% is a common tipping if there is no service charge in Israel.`
+        msg: `10% - 12% is a common tipping if there is no service charge in Israel.`,
+        symbol: '₪'
     },
     {
         name: 'Italy',
         tip: 10,
-        msg: `10% on top of service charge is a common tipping practice in Italy.`
+        msg: `10% on top of service charge is a common tipping practice in Italy.`,
+        symbol: '€'
     },
     {
         name: 'Japan',
         tip: 0,
-        msg: `⛔Tipping is perceived as insulting in Japan!⛔`
+        msg: `⛔Tipping is perceived as insulting in Japan!⛔`,
+        symbol: '¥'
     },
     {
         name: 'Kenya',
         tip: 5,
-        msg: `5% is a common tipping if there is no service charge in Kenya.`
+        msg: `5% is a common tipping if there is no service charge in Kenya.`,
+        symbol: '(Ksh)'
     },
     {
         name: 'Luxembourg',
         tip: 5,
-        msg: `5% - 10% is a common tipping practice in Luxembourg.`
+        msg: `5% - 10% is a common tipping practice in Luxembourg.`,
+        symbol: '(F)'
     },
     {
         name: 'Macao',
         tip: 5,
-        msg: `5% - 10% on top of service charge is a common tipping practice in Macao.`
+        msg: `5% - 10% on top of service charge is a common tipping practice in Macao.`,
+        symbol: '(MOP$)'
     },
     {
         name: 'Madagascar',
         tip: 10,
-        msg: `10% is a common tipping practice in Madagascar.`
+        msg: `10% is a common tipping practice in Madagascar.`,
+        symbol: '(Ar)'
     },
     {
         name: 'Malaysia',
         tip: 0,
-        msg: `Tipping is uncommon in Malaysia.`
+        msg: `Tipping is uncommon in Malaysia.`,
+        symbol: '(RM)'
     },
     {
         name: 'Mexico',
         tip: 10,
-        msg: `10% - 15% is a common tipping practice in Mexico.`
+        msg: `10% - 15% is a common tipping practice in Mexico.`,
+        symbol: '(Mex$)'
     },
     {
         name: 'Morocco',
         tip: 1,
-        msg: `Leave loose change in Morocco.`
+        msg: `Leave loose change in Morocco.`,
+        symbol: '(MAD)'
     },
     {
         name: 'New Zealand',
         tip: 0,
-        msg: `Tipping is uncommon in New Zealand.`
+        msg: `Tipping is uncommon in New Zealand.`,
+        symbol: '(NZD)'
     },
     {
         name: 'Nicaragua',
         tip: 10,
-        msg: `10% is a common tipping practice for special service in Nicaragua.`
+        msg: `10% is a common tipping practice for special service in Nicaragua.`,
+        symbol: '(C$)'
     },
     {
         name: 'Norway',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Norway.`
+        msg: `10% is a common tipping if there is no service charge in Norway.`,
+        symbol: '(kr)'
     },
     {
         name: 'Oman',
         tip: 0,
-        msg: `Tipping is uncommon in Oman.`
+        msg: `Tipping is uncommon in Oman.`,
+        symbol: 'ر.ع.'
     },
     {
         name: 'Paraguay',
         tip: 10,
-        msg: `10% is a common tipping practice in Paraguay.`
+        msg: `10% is a common tipping practice in Paraguay.`,
+        symbol: '₲'
     },
     {
         name: 'Peru',
         tip: 10,
-        msg: `Up to 10% is a common tipping practice for special service in Peru.`
+        msg: `Up to 10% is a common tipping practice for special service in Peru.`,
+        symbol: 'S/'
     },
     {
         name: 'Philippines',
         tip: 10,
-        msg: `10% is a common tipping practice in Philippines.`
+        msg: `10% is a common tipping practice in Philippines.`,
+        symbol: '₱'
     },
     {
         name: 'Poland',
         tip: 10,
-        msg: `10% is a common tipping practice in Poland.`
+        msg: `10% is a common tipping practice in Poland.`,
+        symbol: 'zł'
     },
     {
         name: 'Portugal',
         tip: 10,
-        msg: `10% - 15% is a common tipping if there is no service charge in Portugal.`
+        msg: `10% - 15% is a common tipping if there is no service charge in Portugal.`,
+        symbol: '€'
     },
     {
         name: 'Romania',
         tip: 0,
-        msg: `It is common to round up the bill in Romania.`
+        msg: `It is common to round up the bill in Romania.`,
+        symbol: '(lei)'
     },
     {
         name: 'Russia',
         tip: 10,
-        msg: `10% - 15% is a common tipping practice in Russia.`
+        msg: `10% - 15% is a common tipping practice in Russia.`,
+        symbol: '₽'
     },
     {
         name: 'Samoa',
         tip: 0,
-        msg: `Tipping is uncommon in Samoa.`
+        msg: `Tipping is uncommon in Samoa.`,
+        symbol: '(SAT)'
     },
     {
         name: 'Saudi Arabia',
         tip: 10,
-        msg: `10% - 15% is a common tipping practice in Saudi Arabia.`
+        msg: `10% - 15% is a common tipping practice in Saudi Arabia.`,
+        symbol: '(SR)'
     },
     {
         name: 'Scotland',
         tip: 10,
-        msg: `10% - 15% is a common tipping if there is no service charge in Scotland.`
+        msg: `10% - 15% is a common tipping if there is no service charge in Scotland.`,
+        symbol: '£'
     },
     {
         name: 'Singapore',
         tip: 0,
-        msg: `Tipping is uncommon in Singapore.`
+        msg: `Tipping is uncommon in Singapore.`,
+        symbol: '(S$)'
     },
     {
         name: 'South Africa',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in South Africa.`
+        msg: `10% is a common tipping if there is no service charge in South Africa.`,
+        symbol: '(R)'
     },
     {
         name: 'South Korea',
         tip: 0,
-        msg: `Tipping is uncommon in South Korea.`
+        msg: `Tipping is uncommon in South Korea.`,
+        symbol: '₩'
     },
     {
         name: 'Spain',
         tip: 7,
-        msg: `7% - 10% on top of service charge is a common tipping practice in Spain.`
+        msg: `7% - 10% on top of service charge is a common tipping practice in Spain.`,
+        symbol: '€'
     },
     {
         name: 'Sweden',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Sweden.`
+        msg: `10% is a common tipping if there is no service charge in Sweden.`,
+        symbol: '(SEK)'
     },
     {
         name: 'Switzerland',
         tip: 0,
-        msg: `It is common to round up the bill in Switzerland.`
+        msg: `It is common to round up the bill in Switzerland.`,
+        symbol: '(CHf)'
     },
     {
         name: 'Taiwan',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Taiwan.`
+        msg: `10% is a common tipping if there is no service charge in Taiwan.`,
+        symbol: '(NT$)'
     },
     {
         name: 'Tanzania',
         tip: 10,
-        msg: `10% is a common tipping practice in Tanzania.`
+        msg: `10% is a common tipping practice in Tanzania.`,
+        symbol: '(TSh)'
     },
     {
         name: 'Thailand',
         tip: 0,
-        msg: `Tipping is uncommon in Thailand.`
+        msg: `Tipping is uncommon in Thailand.`,
+        symbol: '฿'
     },
     {
         name: 'Turkey',
         tip: 0,
-        msg: `It is common to round up the bill in Turkey.`
+        msg: `It is common to round up the bill in Turkey.`,
+        symbol: '₺'
     },
     {
         name: 'Ukraine',
         tip: 10,
-        msg: `10% is a common tipping practice in Ukraine.`
+        msg: `10% is a common tipping practice in Ukraine.`,
+        symbol: '₴'
     },
     {
         name: 'United Arab Emirates',
         tip: 0,
-        msg: `Tipping is uncommon in United Arab Emirates.`
+        msg: `Tipping is uncommon in United Arab Emirates.`,
+        symbol: 'د.إ'
     },
     {
         name: 'United States',
         tip: 15,
-        msg: `15% - 20% is a common tipping practice in United States.`
+        msg: `15% - 20% is a common tipping practice in United States.`,
+        symbol: '$'
     },
     {
         name: 'Venezuela',
         tip: 10,
-        msg: `10% is a common tipping practice in Venezuela.`
+        msg: `10% is a common tipping practice in Venezuela.`,
+        symbol: '(Bs)'
     },
     {
         name: 'Vietnam',
         tip: 0,
-        msg: `Tipping is uncommon in Vietnam.`
+        msg: `Tipping is uncommon in Vietnam.`,
+        symbol: '₫'
     },
     {
         name: 'Wales',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Wales.`
+        msg: `10% is a common tipping if there is no service charge in Wales.`,
+        symbol: '£'
     },
 
 ]
