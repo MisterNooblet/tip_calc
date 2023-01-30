@@ -108,7 +108,7 @@ let suggestions2 = [
         name: 'Argentina',
         tip: 10,
         msg: `10% is a common tipping practice in Argentina.`,
-        symbol: '$'
+        symbol: '(Arg$)'
     },
     {
         name: 'Armenia',
