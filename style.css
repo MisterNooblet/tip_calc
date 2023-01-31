@@ -20,7 +20,7 @@ h3 {
   font-size: 1rem;
 }
 
-form {
+.form {
   width: 80%;
   margin: 0 auto;
   display: flex;
