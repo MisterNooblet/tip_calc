@@ -5,6 +5,7 @@ const tipTop = document.querySelector("#tipTop");
 const searchInput = document.querySelector(".searchInput");
 const input = searchInput.querySelector("input");
 const resultBox = searchInput.querySelector(".resultBox");
+const moneyCode = document.querySelectorAll('.valueCode')
 // const icon = searchInput.querySelector(".icon");
 const countyInfoTxt = document.querySelector('.countyInfoTxt');
 
@@ -23,8 +24,6 @@ let bill = 0
 
 //Event listeners
 tipRange.addEventListener('input', function () {
-
-
     if (this.value < 10) {
         tipPercent = Number(`0.0${this.value}`)
 
@@ -63,7 +62,6 @@ function calcExpenses() {
     updateTipandBill(totalExpense)
     updateTipSplit(splitTip)
     updateBillSplit(splitBill)
-
 }
 
 //ui update functions
@@ -81,13 +79,57 @@ function updateBillSplit(value) {
     splitBills.innerHTML = `${value.toFixed(2)}`
 }
 
+input.addEventListener('keyup', (e) => {
+    let results = []
+    if (input.value.length > 0) {
+        results = suggestions.filter((country) => country.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+        let listitems = document.querySelectorAll('.resultBox li')
+        console.log(listitems);
+    }
+    console.log(results.length);
+    if (results.length != -1) {
+        resultBox.innerHTML = ''
+        results.forEach((element) => {
+            let index = 0
+            suggestions.forEach((ele, idx) => {
+                if (ele.name === element.name) {
+                    index = idx;
+                }
+            })
+            resultBox.innerHTML += `<li onclick="displayInfo(${index})">${element.name}</li>`
+            searchInput.classList.add("active")
+        })
+    } else {
+        resultBox.innerHTML = ''
+        searchInput.classList.remove("active")
+    }
+})
 
 
+function displayInfo(country) {
+    let selection = suggestions[country]
+    countyInfoTxt.innerHTML = `${selection.msg}`
+    searchInput.classList.add('hidden')
+    tipRange.value = selection.tip
+    moneyCode.forEach(element => {
+        console.log(element);
+        element.textContent = selection.symbol
+    });
+    updateTipVal(selection.tip)
+    calcExpenses()
+}
 
-///TESTTTTTTTTTTTTTTTTTTTTTTTTTTT
+function updateTipVal(val) {
+    if (val < 10) {
+        tipPercent = Number(`0.0${val}`)
 
+    } else {
+        tipPercent = val * 0.01
+    }
+    tipNum.innerHTML = `${val}%`
+}
 
-
+///////////Suggestions//////////////////////
 let suggestions = [
     {
         name: 'Argentina',
@@ -134,7 +176,7 @@ let suggestions = [
     {
         name: 'Belgium',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Belgium.`,
+        msg: `10% is a common tipping practice if there is no service charge in Belgium.`,
         symbol: '€'
     },
     {
@@ -220,7 +262,7 @@ let suggestions = [
     {
         name: 'Ecuador',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Ecuador.`,
+        msg: `10% is a common tipping practice if there is no service charge in Ecuador.`,
         symbol: '$'
     },
     {
@@ -232,7 +274,7 @@ let suggestions = [
     {
         name: 'England',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in England.`,
+        msg: `10% is a common tipping practice if there is no service charge in England.`,
         symbol: '£'
     },
     {
@@ -244,7 +286,7 @@ let suggestions = [
     {
         name: 'Finland',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Finland.`,
+        msg: `10% is a common tipping practice if there is no service charge in Finland.`,
         symbol: '(mk)'
     },
     {
@@ -286,19 +328,19 @@ let suggestions = [
     {
         name: 'Hungary',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Hungary.`,
+        msg: `10% is a common tipping practice if there is no service charge in Hungary.`,
         symbol: '(Ft)'
     },
     {
         name: 'Iceland',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Iceland.`,
+        msg: `10% is a common tipping practice if there is no service charge in Iceland.`,
         symbol: '(kr)'
     },
     {
         name: 'India',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in India.`,
+        msg: `10% is a common tipping practice if there is no service charge in India.`,
         symbol: '₹'
     },
     {
@@ -316,7 +358,7 @@ let suggestions = [
     {
         name: 'Israel',
         tip: 10,
-        msg: `10% - 12% is a common tipping if there is no service charge in Israel.`,
+        msg: `10% - 12% is a common tipping practice if there is no service charge in Israel.`,
         symbol: '₪'
     },
     {
@@ -334,7 +376,7 @@ let suggestions = [
     {
         name: 'Kenya',
         tip: 5,
-        msg: `5% is a common tipping if there is no service charge in Kenya.`,
+        msg: `5% is a common tipping practice if there is no service charge in Kenya.`,
         symbol: '(Ksh)'
     },
     {
@@ -388,7 +430,7 @@ let suggestions = [
     {
         name: 'Norway',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Norway.`,
+        msg: `10% is a common tipping practice if there is no service charge in Norway.`,
         symbol: '(kr)'
     },
     {
@@ -424,7 +466,7 @@ let suggestions = [
     {
         name: 'Portugal',
         tip: 10,
-        msg: `10% - 15% is a common tipping if there is no service charge in Portugal.`,
+        msg: `10% - 15% is a common tipping practice if there is no service charge in Portugal.`,
         symbol: '€'
     },
     {
@@ -454,7 +496,7 @@ let suggestions = [
     {
         name: 'Scotland',
         tip: 10,
-        msg: `10% - 15% is a common tipping if there is no service charge in Scotland.`,
+        msg: `10% - 15% is a common tipping practice if there is no service charge in Scotland.`,
         symbol: '£'
     },
     {
@@ -466,7 +508,7 @@ let suggestions = [
     {
         name: 'South Africa',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in South Africa.`,
+        msg: `10% is a common tipping practice if there is no service charge in South Africa.`,
         symbol: '(R)'
     },
     {
@@ -484,7 +526,7 @@ let suggestions = [
     {
         name: 'Sweden',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Sweden.`,
+        msg: `10% is a common tipping practice if there is no service charge in Sweden.`,
         symbol: '(SEK)'
     },
     {
@@ -496,7 +538,7 @@ let suggestions = [
     {
         name: 'Taiwan',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Taiwan.`,
+        msg: `10% is a common tipping practice if there is no service charge in Taiwan.`,
         symbol: '(NT$)'
     },
     {
@@ -550,58 +592,8 @@ let suggestions = [
     {
         name: 'Wales',
         tip: 10,
-        msg: `10% is a common tipping if there is no service charge in Wales.`,
+        msg: `10% is a common tipping practice if there is no service charge in Wales.`,
         symbol: '£'
     },
 
 ]
-
-// getting all required elements
-
-
-
-input.addEventListener('keyup', (e) => {
-    let results = []
-    if (input.value.length > 0) {
-        results = suggestions.filter((country) => country.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
-        let listitems = document.querySelectorAll('.resultBox li')
-        console.log(listitems);
-    }
-    console.log(results.length);
-    if (results.length != -1) {
-        resultBox.innerHTML = ''
-        results.forEach((element) => {
-            let index = 0
-            suggestions.forEach((ele, idx) => {
-                if (ele.name === element.name) {
-                    index = idx;
-                }
-            })
-            resultBox.innerHTML += `<li onclick="displayInfo(${index})">${element.name}</li>`
-            searchInput.classList.add("active")
-        })
-    } else {
-        resultBox.innerHTML = ''
-        searchInput.classList.remove("active")
-    }
-})
-
-
-function displayInfo(country) {
-    let selection = suggestions[country]
-    countyInfoTxt.innerHTML = `${selection.msg}`
-    searchInput.classList.add('hidden')
-    tipRange.value = selection.tip
-    updateTipVal(selection.tip)
-    calcExpenses()
-}
-
-function updateTipVal(val) {
-    if (val < 10) {
-        tipPercent = Number(`0.0${val}`)
-
-    } else {
-        tipPercent = val * 0.01
-    }
-    tipNum.innerHTML = `${val}%`
-}
