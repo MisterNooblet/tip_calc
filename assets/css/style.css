@@ -165,3 +165,13 @@ button {
   color: #644bff;
   cursor: pointer;
 }
+
+.countryInfo {
+  text-align: center;
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.hidden {
+  display: none;
+}

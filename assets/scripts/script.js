@@ -2,6 +2,11 @@ const tipRange = document.querySelector('#tip-range');
 const splitRange = document.querySelector('#splitRange');
 const billTotal = document.querySelector("#billTotal");
 const tipTop = document.querySelector("#tipTop");
+const searchInput = document.querySelector(".searchInput");
+const input = searchInput.querySelector("input");
+const resultBox = searchInput.querySelector(".resultBox");
+// const icon = searchInput.querySelector(".icon");
+const countyInfoTxt = document.querySelector('.countyInfoTxt');
 
 //DOM Txt's
 const tipNum = document.querySelector('#tipNum');
@@ -9,9 +14,10 @@ const splitNum = document.querySelector('#splitNum');
 const tipAndBill = document.querySelector('#tipAndBill');
 const tipBottom = document.querySelector('#tipBottom');
 const splitBills = document.querySelector('#splitBills');
-
+//BTN'S
+const countriesBtn = document.querySelector('#countriesBtn')
 //Variables
-let tipPercent = 0.01
+let tipPercent = 0
 let splitPeople = 1
 let bill = 0
 
@@ -39,6 +45,12 @@ billTotal.addEventListener('input', function () {
     bill = Number(this.value)
     console.log(bill);
     calcExpenses()
+})
+
+countriesBtn.addEventListener('click', () => {
+    searchInput.classList.remove('hidden')
+    resultBox.innerHTML = ''
+    input.value = ''
 })
 
 //calc expenses function
@@ -74,36 +86,9 @@ function updateBillSplit(value) {
 
 ///TESTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
-let suggestions = [
-    "Channel",
-    "CodingLab",
-    "CodingNepal",
-    "YouTube",
-    "YouTuber",
-    "YouTube Channel",
-    "Blogger",
-    "Bollywood",
-    "Vlogger",
-    "Vechiles",
-    "Facebook",
-    "Freelancer",
-    "Facebook Page",
-    "Designer",
-    "Developer",
-    "Web Designer",
-    "Web Developer",
-    "Login Form in HTML & CSS",
-    "How to learn HTML & CSS",
-    "How to learn JavaScript",
-    "How to became Freelancer",
-    "How to became Web Designer",
-    "How to start Gaming Channel",
-    "How to start YouTube Channel",
-    "What does HTML stands for?",
-    "What does CSS stands for?",
-];
 
-let suggestions2 = [
+
+let suggestions = [
     {
         name: 'Argentina',
         tip: 10,
@@ -572,51 +557,51 @@ let suggestions2 = [
 ]
 
 // getting all required elements
-const searchInput = document.querySelector(".searchInput");
-const input = searchInput.querySelector("input");
-const resultBox = searchInput.querySelector(".resultBox");
-const icon = searchInput.querySelector(".icon");
-let linkTag = searchInput.querySelector("a");
-let webLink;
 
-let emptyArray = [];
-// if user press any key and release
-// input.onkeyup = (e) => {
-//     let userData = e.target.value; //user enetered data
-//     if (userData) {
-//         emptyArray = suggestions2.filter((data) => {
-//             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-//             return data.name.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
-//         });
-//         emptyArray = emptyArray.map((data) => {
-//             // passing return data inside li tag
-//             return data.name = '<li>' + data.name + '</li>';
-//         });
-//         searchInput.classList.add("active"); //show autocomplete box
-//         showSuggestions(emptyArray);
-//         let allList = resultBox.querySelectorAll("li");
-//         for (let i = 0; i < allList.length; i++) {
-//             //adding onclick attribute in all li tag
-//             allList[i].setAttribute("onclick", "select(this)");
-//         }
-//     } else {
-//         searchInput.classList.remove("active"); //hide autocomplete box
-//     }
-// }
+
 
 input.addEventListener('keyup', (e) => {
     let results = []
-    results = suggestions2.filter((country) => country.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
-    console.log(results);
-    showSuggestions(results)
-})
-function showSuggestions(list) {
-    let listData;
-    if (!list.length) {
-        userValue = input.value;
-        listData = '<li>' + userValue + '</li>';
-    } else {
-        listData = list.join('');
+    if (input.value.length > 0) {
+        results = suggestions.filter((country) => country.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+        let listitems = document.querySelectorAll('.resultBox li')
+        console.log(listitems);
     }
-    resultBox.innerHTML = listData;
+    console.log(results.length);
+    if (results.length != -1) {
+        resultBox.innerHTML = ''
+        results.forEach((element) => {
+            let index = 0
+            suggestions.forEach((ele, idx) => {
+                if (ele.name === element.name) {
+                    index = idx;
+                }
+            })
+            resultBox.innerHTML += `<li onclick="displayInfo(${index})">${element.name}</li>`
+            searchInput.classList.add("active")
+        })
+    } else {
+        resultBox.innerHTML = ''
+        searchInput.classList.remove("active")
+    }
+})
+
+
+function displayInfo(country) {
+    let selection = suggestions[country]
+    countyInfoTxt.innerHTML = `${selection.msg}`
+    searchInput.classList.add('hidden')
+    tipRange.value = selection.tip
+    updateTipVal(selection.tip)
+    calcExpenses()
+}
+
+function updateTipVal(val) {
+    if (val < 10) {
+        tipPercent = Number(`0.0${val}`)
+
+    } else {
+        tipPercent = val * 0.01
+    }
+    tipNum.innerHTML = `${val}%`
 }
