@@ -14,10 +14,10 @@
 
 <body>
     <div class="calcbody">
-        <form id="calcHero" action="">
+        <form id="calcHero" onkeypress="return event.keyCode != 13">
             <div class="ad"></div>
             <div id="calcMain" class="line "><Span class="title">Bill Total:</Span> <input id="billTotal" class="fill"
-                    type="number" placeholder="00.00"></div>
+                    type="number" placeholder="00.00" formaction="/"></div>
             <div class="line values infoBorder"><Span class="title">Tip:</Span>
                 <div class="line">
                     <h3 id="tipTop" class="fill">0.00<h3 class="valueCode"></h3>

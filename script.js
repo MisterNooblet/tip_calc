@@ -80,6 +80,7 @@ function updateBillSplit(value) {
 }
 
 input.addEventListener('keyup', (e) => {
+    e.preventDefault()
     let results = []
     if (input.value.length > 0) {
         results = suggestions.filter((country) => country.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
